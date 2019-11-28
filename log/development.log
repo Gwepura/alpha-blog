@@ -212,3 +212,117 @@ Migrating to AddDescriptionToArticles (20191127085127)
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 196.45.23.251 at 2019-11-28 06:45:46 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 216ms (Views: 211.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 196.45.23.251 at 2019-11-28 06:45:47 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 196.45.23.251 at 2019-11-28 06:45:52 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:11
+  Rendered articles/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 19.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/articles/1/edit" for 196.45.23.251 at 2019-11-28 06:45:55 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:48
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (13.5ms)
+  Rendered articles/edit.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 32ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 196.45.23.251 at 2019-11-28 06:45:57 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:11
+  Rendered articles/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/1" for 196.45.23.251 at 2019-11-28 06:45:58 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:48
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 18ms (Views: 12.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 196.45.23.251 at 2019-11-28 06:46:00 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:11
+  Rendered articles/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/articles/14" for 196.45.23.251 at 2019-11-28 06:46:02 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SbEVyQjiVeOnuiukgxoRwsoladYWrkmzw/iQke6RzFH5NLhB3nwdNAW1VSrwB3gq4YyRxrwd1JGjs96vJILodQ==", "id"=>"14"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:39
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/articles_controller.rb:39
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:39
+Redirected to https://86ec444eaf4f4c568c7ba4abd9fd869b.vfs.cloud9.us-east-2.amazonaws.com/articles
+Completed 302 Found in 19ms (ActiveRecord: 12.4ms)
+
+
+Started GET "/articles" for 196.45.23.251 at 2019-11-28 06:46:03 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:11
+  Rendered articles/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 196.45.23.251 at 2019-11-28 06:46:19 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
