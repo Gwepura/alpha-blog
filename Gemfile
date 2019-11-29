@@ -5,9 +5,13 @@ ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
+# For password hashing
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+
+# For pagination
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'bootstrap-will_paginate', '~> 1.0.0'
 # Bootstrap
-#gem 'bootstrap', '~> 4.3.1'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'jquery-rails'
 # Sprockets rails 
