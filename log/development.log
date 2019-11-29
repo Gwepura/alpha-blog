@@ -10354,3 +10354,122 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 65ms (Views: 62.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 196.45.23.251 at 2019-11-29 13:53:36 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 451ms (Views: 446.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 196.45.23.251 at 2019-11-29 13:53:38 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 196.45.23.251 at 2019-11-29 13:53:42 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered users/_form.html.erb (15.0ms)
+  Rendered users/new.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 84ms (Views: 71.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 196.45.23.251 at 2019-11-29 13:54:02 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W5IAnGhUwj8eAD2JS5yOUgR6fUIcpRzf1MFs1dfic6cokAfcPMBCriA2hncmgTyBa/WvS0qdhbXquxgNxvr24g==", "user"=>{"username"=>"theBest", "email"=>"thebest@test.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "theBest"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "thebest@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "theBest"], ["email", "thebest@test.com"], ["created_at", "2019-11-29 13:54:02.609912"], ["updated_at", "2019-11-29 13:54:02.609912"], ["password_digest", "$2a$12$zvlSBUBY4WPaVKm4o91ra.n.ZZ7RdkUoUjkL3PxrWSKJ4MxQe.n.S"]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+Completed 500 Internal Server Error in 335ms (ActiveRecord: 17.4ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/users_controller.rb:17:in `create'
+Started POST "/users" for 196.45.23.251 at 2019-11-29 13:54:20 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W5IAnGhUwj8eAD2JS5yOUgR6fUIcpRzf1MFs1dfic6cokAfcPMBCriA2hncmgTyBa/WvS0qdhbXquxgNxvr24g==", "user"=>{"username"=>"theBest", "email"=>"thebest@test.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "theBest"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "thebest@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered users/_form.html.erb (3.5ms)
+  Rendered users/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (8.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 375ms (Views: 55.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 196.45.23.251 at 2019-11-29 13:54:37 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pPbx2U4fLYOxYq3FwKtPl9SuXQVzy/xJrS+kThxdikVuY0bxl/U3YDXO7XKi9tBH+AZBTgd1rGKMQ2PT8K07ng==", "user"=>{"username"=>"anesu25", "email"=>"anesu25@test.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "anesu25"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "anesu25@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "anesu25"], ["email", "anesu25@test.com"], ["created_at", "2019-11-29 13:54:37.865188"], ["updated_at", "2019-11-29 13:54:37.865188"], ["password_digest", "$2a$12$1z5rJbpTtPXlj1WdnipB/.wcmRU7eT4Pf8hdxyO3EUBetCsmi/N62"]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+Redirected to https://86ec444eaf4f4c568c7ba4abd9fd869b.vfs.cloud9.us-east-2.amazonaws.com/users/11
+Completed 302 Found in 332ms (ActiveRecord: 14.4ms)
+
+
+Started GET "/users/11" for 196.45.23.251 at 2019-11-29 13:54:38 +0000
+Cannot render console from 196.45.23.251! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:48
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:12
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 11], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/articles/_article.html.erb:3
+  Rendered articles/_article.html.erb (1.8ms)
+  Rendered users/show.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 98ms (Views: 65.0ms | ActiveRecord: 0.9ms)
+
+
